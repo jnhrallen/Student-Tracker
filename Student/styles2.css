@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Popins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-height: 100vh; /* Limits height to the viewport */
+    overflow-y: auto; /* Allows scrolling if content exceeds max height */
+    background-image: linear-gradient(rgba(23, 22, 24, 0.6), rgba(23, 22, 24, 0.6)), url(images/background2.png);
+    background-size: cover; /* Try 'contain' if you want to see the entire image */
+    background-position: center; /* Keeps the image centered */
+    padding: 5px 8%; /* Adjusted padding */
+}
+
+
+
+
+content {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    min-height: 100vh; /* Ensures content takes full viewport height */
+    text-align: center; /* Centers text inside the container */
+}
+
+
+.title {
+    color: #e8efee;
+    text-align: center;
+}
+
+
+
+.logo-section {
+    display: flex;
+    align-items: center; /* Align logo and tagline vertically */
+}
+
+
+.logo {
+    width: 110px; /* Adjust this value to make the logo smaller */
+    height: auto;
+    padding: 10px; 
+    border: 3px solid  #1f1e1d; 
+    border-radius: 8px;
+    background-color:rgba(22, 22, 22); 
+    cursor: pointer;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.tagline {
+    color: #e8efee;
+    font-size: 0.8rem; /* Corrected font size unit */
+    font-weight: 100;
+    white-space: nowrap; /* Prevents the tagline from breaking to a new line */
+}
+    
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+nav ul{
+   
+        list-style: none;
+        width: 100%;
+        text-align: right;
+        padding-right: 60px;
+}
+
+nav ul li { 
+    display: inline-block;
+    margin: 10px 20px;
+
+}
+
+nav ul li a{
+     color: #e8efee;
+     text-decoration: none;
+}
+
+.about-us {
+    color: #e8efee; /* Text color for paragraphs */
+    margin: 20px 0; /* Spacing around the section */
+    padding-left: 20px; /* Adds padding to align content from the left */
+}
+
+.about-us h2 {
+    font-size: 1.5rem; /* Size of section heading */
+    font-weight: bold; /* Make heading bold */
+    color: #ffffff; /* Heading color */
+    text-align: left; /* Left-align heading */
+    margin-top: 20px; /* Space above heading */
+}
+
+.about-us p {
+    font-size: 1.1rem; /* Font size for readability */
+    line-height: 1.8; /* Increased line height */
+    letter-spacing: 0.5px; /* Slightly increased letter spacing */
+    color: #e8efee; /* Paragraph color */
+    margin: 10px 0; /* Space between paragraphs */
+    text-align: left; /* Left-align text */
+}
+footer#contactUs {
+    background-image: linear-gradient(rgba(23, 22, 24, 0.6), rgba(23, 22, 24, 0.6)), url(images/background2.png);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8em;
+    position: relative;
+    bottom: 0;
+    margin-top: 30px; /* Adjusted margin to increase space from the content above */
+}
+
+footer#contactUs h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px; /* Reduced margin for less space */
+}
+
+.contact-box {
+    background-color: rgba(21, 21, 21, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(193, 189, 189, 0.5);
+    padding: 10px;
+    margin: 0 auto 10px auto; /* Reduced margin to create less space below the contact box */
+    width: 60%;
+    max-width: 300px;
+    text-align: center;
+    color: white;
+}
+
+.contact-box h3 {
+    font-size: 1.1em;
+    margin-bottom: 5px; /* Reduced margin for the heading */
+}
+
+.contact-box p {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.contact-box a {
+    color: #e3eae3;
+    text-decoration: none;
+}
+
+.contact-box a:hover {
+    text-decoration: underline;
+}

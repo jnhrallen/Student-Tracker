@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Certification Tracker</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img src="images/logo.jpg" class="logo" alt="Logo">
+            <span class="tagline">"Easily Track Your Certifications"</span>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="instructionguide.html">Instruction Guide</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <h1 class="title">Certification Summary</h1>
+        </div>
+
+    </div>
+    
+    
+    <script>
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                name: params.get("name"),
+                id: params.get("id"),
+                attempted: params.get("attempted"),
+                completed: params.get("completed"),
+                dateCompleted: params.get("dateCompleted")
+            };
+        }
+
+        function displayCertificationData() {
+            const data = getQueryParams();
+            if (data.name && data.id) {
+                const contentDiv = document.querySelector(".content");
+                contentDiv.innerHTML = `
+                    <h1 class="title">Certification Summary for ${data.name}</h1>
+                    <table class="certification-table">
+                        <tr>
+                            <td class="certification-label"><strong>Certification Attempted:</strong></td>
+                            <td class="certification-data">${data.attempted || 'N/A'}</td>
+                        </tr>
+                        <tr>
+                            <td class="certification-label"><strong>Certification Completed:</strong></td>
+                            <td class="certification-data">${data.completed || 'N/A'}</td>
+                        </tr>
+                        <tr>
+                            <td class="certification-label"><strong>Date Completed:</strong></td>
+                            <td class="certification-data">${data.dateCompleted || 'N/A'}</td>
+                        </tr>
+                    </table>
+                    <button onclick="goBack()" class="go-back-btn">Go Back</button>
+                `;
+            } else {
+                document.querySelector(".content").innerHTML = "<p>No data available for the entered credentials.</p>";
+            }
+        }
+        function goBack() {
+            window.location.href = 'home.html'; // Replace 'homepage.html' with your actual homepage URL if needed
+        }
+
+        
+        window.onload = displayCertificationData; // Ensure the function runs on page load
+    </script>
+    
+    
+</body>
+</html>
